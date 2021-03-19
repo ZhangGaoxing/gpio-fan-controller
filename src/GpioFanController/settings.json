@@ -1,0 +1,22 @@
+{
+  "Pin": 117,
+  "Interval": 5000,
+  "Gates": [
+    {
+      "Temperature": 50,
+      "Speed": 0.3
+    },
+    {
+      "Temperature": 60,
+      "Speed": 0.5
+    },
+    {
+      "Temperature": 70,
+      "Speed": 0.7
+    },
+    {
+      "Temperature": 80,
+      "Speed": 1
+    }
+  ]
+}
