@@ -1,4 +1,4 @@
-﻿using Iot.Device.CpuTemperature;
+using Iot.Device.CpuTemperature;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -30,9 +30,7 @@ namespace GpioFanController
 
             int interval = root.GetSection("Interval").Get<int>();
             _pin = root.GetSection("Pin").Get<int>();
-            _gates = root.GetSection("Gates").Get<List<Gate>>()
-                .OrderBy(x => x.Temperature)
-                .ToList();
+            _gates = root.GetSection("Gates").Get<List<Gate>>();
 
             _cpuTemperature = new CpuTemperature();
             _fan = new SoftwarePwmChannel(pinNumber: _pin, frequency: 400, dutyCycle: 0);
